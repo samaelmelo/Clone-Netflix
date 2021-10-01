@@ -13,11 +13,10 @@ body{
 
 }
 
-/* .lists{
-  position: relative;
-  top: -100px;
+.lists{
+ margin-top: -7rem;
 
-} */
+}
 
 footer{
   display: flex;
@@ -52,11 +51,12 @@ footer p a:hover{
 
   display: grid;
   place-items: center;
+  transition: .4s ease;
 }
 
 .loading img{
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  /* margin-left: -3rem; */
 
 }
 
@@ -64,3 +64,4 @@ footer p a:hover{
   visibility: hidden;
   opacity: 0;
 }
+

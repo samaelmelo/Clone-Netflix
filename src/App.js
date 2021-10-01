@@ -11,6 +11,14 @@ function App() {
   const [movieList, setMovieList] = useState([])
   const [featureData, setFeatureData] = useState(null)
   const [blackHeader, setBlackHeader] = useState(false)
+  const [connect, setConnect] = useState('loading')
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setConnect('loading desconnect')
+    },2000)
+
+  },[])
 
   useEffect(() => {
     const loadAll = async () => {
@@ -44,6 +52,7 @@ function App() {
   }, [])
 
   
+ 
 
   return (
     <div className="page">
@@ -52,11 +61,11 @@ function App() {
       {/* quando deixar de ser nulo, quando existir mostra o componente */}
       {featureData && <FeaturedMovie item={featureData} />}
 
-      <sections className="lists">
+      <section className="lists" >
         {movieList.map((item, key) => (
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
-      </sections>
+      </section>
 
       <footer>
         <p>
@@ -69,15 +78,16 @@ function App() {
         <p>Dados importados do site Themoviedv.org</p>
       </footer>
 
-      {movieList.length <= 0 &&
+      {/* {movieList.length <= 0 && */}
 
-      <div className='loading'>
+      <div className={connect}>
         <img
           src="https://1.bp.blogspot.com/-B9juta27w6o/Xzk4GGrOziI/AAAAAAABtpE/0OMhU_0hPTY7PhayDfL3eJ5mIc2csWWWwCLcBGAsYHQ/s1600/Netflix_LoadTime.gif"
           alt="Carregando"
         />
       </div>
-      }
+
+      {/* } */} 
     </div>
   )
 }

@@ -100,15 +100,15 @@ e 90% no restante da image*/
     }
 
     .featured-name{
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     .featured-info{
       font-size: .9rem;
     }
     .featured-description{
-      font-size: .9rem;
-      max-width: 90%;
+      font-size: 1rem;
+      max-width: 70%;
     }
 
     .featured-watchButton,
@@ -119,7 +119,13 @@ e 90% no restante da image*/
 
     .featured-genres{
       font-size: .8rem;
-      max-width: 90%;
     }
+
+}
+
+@media screen and (max-width: 550px){
+  .featured-description{
+    max-width: 90%;
+  }
 
 }
