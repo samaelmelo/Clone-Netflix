@@ -34,9 +34,9 @@ export default function FeaturedMovie({item}){
                 <a href={`/list/add/${item.id}`} className='featured-MyListButton'>+ Minha Lista</a>
               </div>
 
-              <span className="featured-genres">
+              <div className="featured-genres">
                 <strong>Gêneros:</strong> {genres.join(', ')}
-              </span>
+              </div>
           </div>
 
         </div>

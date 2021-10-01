@@ -78,7 +78,7 @@ function App() {
         <p>Dados importados do site Themoviedv.org</p>
       </footer>
 
-      {/* {movieList.length <= 0 && */}
+     
 
       <div className={connect}>
         <img
@@ -87,7 +87,7 @@ function App() {
         />
       </div>
 
-      {/* } */} 
+    
     </div>
   )
 }
